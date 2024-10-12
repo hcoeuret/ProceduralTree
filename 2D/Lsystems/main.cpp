@@ -8,21 +8,28 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    
+    /*
     LSystem LeafSystem({'X'});
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
-    LeafSystem.computeLeafStep();
-    
+    */
 
-    /*LSystem OLSystem({'F', '+', 'F', '+', 'F', '+', 'F'});
+    /*
+    LSystem OLSystem({'F', '+', 'F', '+', 'F', '+', 'F'});
     OLSystem.computeOLStep();
     OLSystem.computeOLStep();
     OLSystem.computeOLStep();
     */
+
+    
+    LSystem LabSystem({'F', '+', 'F', '+', 'F', '+', 'F'});
+    LabSystem.computeLabStep();
+    LabSystem.computeLabStep();
+    LabSystem.computeLabStep();
+    
 
 
 
@@ -30,7 +37,7 @@ int main(int argc, char* argv[])
     DisplaySystem DisplaySystem;
 
     //Enter the infinite render loop
-    DisplaySystem.RenderLoop(LeafSystem);
+    DisplaySystem.RenderLoop(LabSystem);
 
     //SDL_cleaner
     SDL_DestroyWindow(DisplaySystem.getWindow());

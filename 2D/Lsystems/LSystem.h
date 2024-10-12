@@ -13,5 +13,6 @@ public :
 	vector<char> GetStringCode() const;
 	void computeLeafStep();
 	void computeOLStep();
+	void computeLabStep();
 };
 

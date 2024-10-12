@@ -39,6 +39,20 @@ void LSystem::computeOLStep() {
 	stringCode_ = nextStringCode;
 }
 
+//FF+F-F+F+FF
+void LSystem::computeLabStep() {
+	vector<char> nextStringCode;
+	for (char element : stringCode_) {
+		if (element == 'F') {
+			nextStringCode.insert(nextStringCode.end(), { 'F', 'F', '+', 'F', '-', 'F', '+', 'F', '+', 'F', 'F'});
+		}
+		else {
+			nextStringCode.push_back(element);
+		}
+	}
+	stringCode_ = nextStringCode;
+}
+
 vector<char> LSystem::GetStringCode() const {
 	return stringCode_;
 }

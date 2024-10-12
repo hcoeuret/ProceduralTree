@@ -1,1 +1,39 @@
-﻿  Lsystems.vcxproj -> C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\x64\Debug\Lsystems.exe
+﻿  DisplaySystem.cpp
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(138,57): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(138,50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(138,44): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(138,38): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47): warning C4244: 'initializing': conversion from 'double' to '_Ty', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47): warning C4244:         ]
+  (compiling source file 'DisplaySystem.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(142,47):
+      the template instantiation context (the oldest one first) is
+          C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(123,28):
+          see reference to function template instantiation 'std::tuple<int,int,int>::tuple<double&,double&,double&,0>(_This2,double &,double &) noexcept' being compiled
+          with
+          [
+              _This2=double &
+          ]
+              C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(123,27):
+              see the first reference to 'std::tuple<int,int,int>::tuple' in 'DisplaySystem::DisplayLSystem'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(358,16):
+          see reference to function template instantiation 'std::tuple<int,int,int>::tuple<std::_Exact_args_t,double&,double&,double&,0>(_Tag,_This2,double &,double &)' being compiled
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=double &
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\tuple(312,102):
+          see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<double&>(_Other)' being compiled
+          with
+          [
+              _This=int,
+              _Other=double &
+          ]
+  
+  LSystem.cpp
+  Generating Code...
+  Lsystems.vcxproj -> C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\x64\Debug\Lsystems.exe
