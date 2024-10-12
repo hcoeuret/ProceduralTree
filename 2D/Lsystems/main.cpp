@@ -8,10 +8,12 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    LSystem LeafSystem({ 'F','+', 'F', 'X' });
+    LSystem LeafSystem({'X'});
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
     LeafSystem.computeLeafStep();
+    LeafSystem.computeLeafStep();
+   
 
 
 

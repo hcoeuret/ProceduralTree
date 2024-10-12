@@ -1,4 +1,6 @@
 ﻿  DisplaySystem.cpp
-C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(100,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(101,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(107,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\DisplaySystem.cpp(108,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   Lsystems.vcxproj -> C:\Users\henri\Documents\Code\ProceduralTree\2D\Lsystems\x64\Debug\Lsystems.exe

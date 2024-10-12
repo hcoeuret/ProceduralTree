@@ -1,7 +1,9 @@
 #include <vector>
 #include <cmath>
+#include <stack>
 #include <iostream>
 #include "DisplaySystem.h"
+
 
 
 
@@ -87,11 +89,16 @@ SDL_Renderer* DisplaySystem::getRenderer() const
 void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
     int xCur = SCREEN_WIDTH/2, yCur = SCREEN_HEIGHT; 
     int xNext = 0, yNext = 0;
-    double angle_degre = 75;
+    double angle_degre = 90;
+    double angle_increment = 22.5;
     double angle_radian = angle_degre * M_PI / 180.0;
-    const int lineLength = 20;
+    const int lineLength = 5;
+    stack<pair<int, int>> saveStack;
+    
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);  // White color
+
+    //vector<char> testString = { 'F', '+', '+', 'F', 'F', '-', '-', 'F', 'F', '-', '-', 'F', 'F', '+', '+', 'F' };
     
     for (auto element : LSystem.GetStringCode()) {
         switch (element)
@@ -99,6 +106,25 @@ void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
         case 'F':
             xNext = xCur - lineLength * cos(angle_radian);
             yNext = yCur - lineLength * sin(angle_radian);
+            break;
+        case '+':
+            angle_degre += angle_increment;
+            angle_radian = angle_degre * M_PI / 180.0;
+            break;
+        case '-':
+            angle_degre -= angle_increment;
+            angle_radian = angle_degre * M_PI / 180.0;
+            break;
+        case '[':
+            saveStack.push({xCur, yCur});
+            break;
+        case ']':
+            xCur = saveStack.top().first;
+            xNext = saveStack.top().first;
+            yCur = saveStack.top().second;
+            yNext = saveStack.top().second;
+            saveStack.pop();
+            break;
         default:
             break;
         }
@@ -110,7 +136,5 @@ void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
         xCur = xNext;
         yCur = yNext;
 
-        //delay between the line
-        SDL_Delay(TICK_DELAY);
     }
 }
