@@ -78,6 +78,8 @@ void DisplaySystem::RenderLoop(LSystem &LSystem)
         
         DisplayLSystem(LSystem);
 
+        SDL_Delay(10000);
+
     }
 }
 
@@ -90,9 +92,9 @@ void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
     int xCur = SCREEN_WIDTH/2, yCur = SCREEN_HEIGHT; 
     int xNext = 0, yNext = 0;
     double angle_degre = 90;
-    double angle_increment = 22.5;
+    double angle_increment = 90;
     double angle_radian = angle_degre * M_PI / 180.0;
-    const int lineLength = 5;
+    const int lineLength = 10;
     stack<pair<int, int>> saveStack;
     
 
