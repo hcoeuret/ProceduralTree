@@ -10,6 +10,7 @@ private :
 
 public :
 	LSystem(vector<char> initVector);
+	vector<char> GetStringCode() const;
 	void computeLeafStep();
 };
 

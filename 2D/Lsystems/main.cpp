@@ -16,13 +16,13 @@ int main(int argc, char* argv[])
 
 
     //Initialize SDL display 
-    DisplaySystem GridDisplaySystem;
+    DisplaySystem DisplaySystem;
 
     //Enter the infinite render loop
-    GridDisplaySystem.RenderLoop();
+    DisplaySystem.RenderLoop(LeafSystem);
 
     //SDL_cleaner
-    SDL_DestroyWindow(GridDisplaySystem.getWindow());
+    SDL_DestroyWindow(DisplaySystem.getWindow());
     SDL_Quit();
 
     return 0;

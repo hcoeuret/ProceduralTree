@@ -23,3 +23,7 @@ void LSystem::computeLeafStep() {
 	}
 	stringCode_ = nextStringCode;
 }
+
+vector<char> LSystem::GetStringCode() const {
+	return stringCode_;
+}
