@@ -2,6 +2,8 @@
 #include <cmath>
 #include <stack>
 #include <iostream>
+#include <tuple>
+#include <string>
 #include "DisplaySystem.h"
 
 
@@ -78,6 +80,8 @@ void DisplaySystem::RenderLoop(LSystem &LSystem)
         
         DisplayLSystem(LSystem);
 
+        SDL_RenderPresent(renderer);
+
         SDL_Delay(10000);
 
     }
@@ -92,10 +96,10 @@ void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
     int xCur = SCREEN_WIDTH/2, yCur = SCREEN_HEIGHT; 
     int xNext = 0, yNext = 0;
     double angle_degre = 90;
-    double angle_increment = 90;
+    double angle_increment = 22.5;
     double angle_radian = angle_degre * M_PI / 180.0;
-    const int lineLength = 10;
-    stack<pair<int, int>> saveStack;
+    const int lineLength = 5;
+    stack<tuple<int, int, int>> saveStack;
     
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);  // White color
@@ -118,21 +122,22 @@ void DisplaySystem::DisplayLSystem(LSystem& LSystem) {
             angle_radian = angle_degre * M_PI / 180.0;
             break;
         case '[':
-            saveStack.push({xCur, yCur});
+            saveStack.push({xCur, yCur, angle_degre});
             break;
         case ']':
-            xCur = saveStack.top().first;
-            xNext = saveStack.top().first;
-            yCur = saveStack.top().second;
-            yNext = saveStack.top().second;
+            xCur = std::get<0>(saveStack.top());
+            xNext = std::get<0>(saveStack.top());
+            yCur = std::get<1>(saveStack.top());
+            yNext = std::get<1>(saveStack.top());
+            angle_degre = std::get<2>(saveStack.top());
             saveStack.pop();
             break;
         default:
             break;
         }
+
         //render the line
         SDL_RenderDrawLine(renderer, xCur, yCur, xNext, yNext);
-        SDL_RenderPresent(renderer);
 
         //update the variable
         xCur = xNext;
