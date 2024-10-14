@@ -1,0 +1,22 @@
+Project : 
+
+Procedural Tree in Unreal Engine 5
+
+Objective : 
+
+- Ship an asset over the unreal engine marketplace
+- Learn more 3D and use Unreal Engine knowledge
+
+Plan :
+
+V1
+A growing branch - 90 degrees
+
+V2
+Linking the branch together with LSystems
+
+V3
+Add Color, Texture and randomness
+
+V4
+Make it a marketplace project
