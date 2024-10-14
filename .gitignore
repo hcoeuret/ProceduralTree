@@ -75,3 +75,7 @@ DerivedDataCache/*
 
 #the starter content that we don't need to save'
 3D\LSystems3D\Content\StarterContent
+/3D/LSystems3D/Binaries/Win64
+/3D/LSystems3D/Config
+/3D/LSystems3D/Intermediate
+/3D/LSystems3D/Saved
