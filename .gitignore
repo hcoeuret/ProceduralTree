@@ -1,3 +1,11 @@
+#the starter content that we don't need to save'
+3D/Tree/Content/StarterContent/
+3D/Tree/Binaries/Win64/
+3D/Tree/Config/
+3D/Tree/Intermediate/
+3D/Tree/Saved/
+
+
 # Visual Studio 2015 user specific files
 .vs/
 
@@ -73,9 +81,5 @@ Plugins/**/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-#the starter content that we don't need to save'
-3D\LSystems3D\Content\StarterContent
-/3D/LSystems3D/Binaries/Win64
-/3D/LSystems3D/Config
-/3D/LSystems3D/Intermediate
-/3D/LSystems3D/Saved
+
+
