@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
 #include "MainTree.generated.h"
 
 UCLASS()
@@ -23,6 +24,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	class UProceduralTreeMeshComponent * TreeMesh;
+	// Static Mesh for the branch (cylinder)
+    UPROPERTY(EditAnywhere)
+    UStaticMesh* BranchMesh;
+
+	UPROPERTY(VisibleAnywhere)
+	TArray<UStaticMeshComponent *> BranchArray;
 
 };
