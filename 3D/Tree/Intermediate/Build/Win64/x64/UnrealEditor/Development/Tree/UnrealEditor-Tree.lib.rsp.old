@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Tree.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\TreeEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\MainTree.gen.cpp.obj"
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\Tree.init.gen.cpp.obj"
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\MainTree.cpp.obj"
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\Tree.cpp.obj"
+"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\Default.rc2.res"
+/OUT:"C:\Users\henri\Documents\Code\ProceduralTree\3D\Tree\Intermediate\Build\Win64\x64\UnrealEditor\Development\Tree\UnrealEditor-Tree.lib"

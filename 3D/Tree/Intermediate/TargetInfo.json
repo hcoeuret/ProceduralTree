@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Tree",
+			"Path": "..\\Source\\Tree.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TreeEditor",
+			"Path": "..\\Source\\TreeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
